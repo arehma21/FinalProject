@@ -15,11 +15,12 @@ public class MainActivity extends AppCompatActivity {
         Button newGame = findViewById(R.id.NewGame);
         newGame.setOnClickListener(unused -> newGameclicked());
 
-
     }
     private void newGameclicked() {
         Intent intent = new Intent(this, GameActivity.class);
+
         startActivity(intent);
+        
 
     }
 }

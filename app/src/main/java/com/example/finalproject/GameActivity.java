@@ -15,6 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GameActivity extends AppCompatActivity {
 
+    private int HitPoints;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +30,7 @@ public class GameActivity extends AppCompatActivity {
         LinearLayout damageparent = findViewById(R.id.DamageParent);
         View damageChunk = getLayoutInflater().inflate(R.layout.damage_chunk,
                 damageparent, false);
-        //TextView dmgType = damageChunk.findViewsWithText(R.id.damageType);
-
+        TextView dmgType = damageChunk.findViewById(R.id.damageType);
+        TextView amount = damageChunk.findViewById(R.id.amount);
     }
 }

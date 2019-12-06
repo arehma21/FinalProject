@@ -18,6 +18,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="New Game" />
+
+        <Button
+            android:id="@+id/HostButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Host" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
