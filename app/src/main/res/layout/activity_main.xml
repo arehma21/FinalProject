@@ -59,6 +59,13 @@
             android:baselineAlignBottom="false"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:text="Messaging"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </LinearLayout>
 
