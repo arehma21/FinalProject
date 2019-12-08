@@ -15,7 +15,7 @@
         <LinearLayout
             android:id="@+id/DiceRolls"
             android:layout_width="154dp"
-            android:layout_height="450dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -66,12 +66,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Send Log" />
+
+            <Spinner
+                android:id="@+id/checkSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="146dp" />
+
+            <Button
+                android:id="@+id/saveLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Log" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/DamageParent"
             android:layout_width="match_parent"
-            android:layout_height="236dp"
+            android:layout_height="198dp"
             android:layout_weight="10"
             android:orientation="vertical">
 

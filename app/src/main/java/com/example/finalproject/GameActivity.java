@@ -1,6 +1,7 @@
 package com.example.finalproject;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.content.Intent;
 
@@ -15,20 +16,30 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONObject;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date.*;
+import java.io.OutputStreamWriter;
+import android.content.Context;
+import android.net.Uri;
 //import com.google.gson.JsonObject;
 
 public class GameActivity extends AppCompatActivity {
     private ImageView diceImage = findViewById(R.id.diceImage);
     private boolean logRolls = false;
     private ArrayList<JsonObject> log = new ArrayList<JsonObject>();
+    private ArrayList<String>logString = new ArrayList<String>();
     private int lastRoll;
     private Timestamp timeLastRoll;
     private String rollCheck;
+    private String filepath;
+    private String dataString;
 
 
 
@@ -67,6 +78,8 @@ public class GameActivity extends AppCompatActivity {
             diceRoll.addProperty("Number", rollNumber);
             diceRoll.addProperty("Time", currentTimeStamp.toString());
             diceRoll.addProperty("Check", rollCheck);
+            log.add(diceRoll);
+            logString.add(diceRoll.toString());
         }
     }
     private void d6clicked() {
@@ -79,6 +92,23 @@ public class GameActivity extends AppCompatActivity {
 
     }
     private void d20clicked() {
+
+    }
+    private void saveLogclicked(String data, Context context) {
+
+        for (int i = 0; i < logString.size(); i++) {
+            dataString = dataString + "\n" + logString.get(i);
+        }
+        try {
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("rollLog.txt", Context.MODE_PRIVATE));
+            outputStreamWriter.write(data);
+            outputStreamWriter.close();
+        }
+        catch (IOException e) {
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
+    }
+    private void sendLogclicked() {
 
     }
 
