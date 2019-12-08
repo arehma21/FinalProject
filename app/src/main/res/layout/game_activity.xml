@@ -15,7 +15,7 @@
         <LinearLayout
             android:id="@+id/DiceRolls"
             android:layout_width="154dp"
-            android:layout_height="331dp"
+            android:layout_height="450dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -44,7 +44,7 @@
                 android:text="Roll D10" />
 
             <Button
-                android:id="@+id/d12"
+                android:id="@+id/d12Game"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Roll D12" />
@@ -54,28 +54,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Roll D20" />
+
+            <Button
+                android:id="@+id/LogRolls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Rolls" />
+
+            <Button
+                android:id="@+id/sendLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send Log" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/damage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Take Damage" />
-
-        <Button
-            android:id="@+id/heal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Heal" />
 
         <LinearLayout
             android:id="@+id/DamageParent"
             android:layout_width="match_parent"
             android:layout_height="236dp"
             android:layout_weight="10"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/diceImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/roll_default" />
+        </LinearLayout>
 
     </LinearLayout>
 
