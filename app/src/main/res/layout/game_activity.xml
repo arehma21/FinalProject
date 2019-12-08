@@ -12,6 +12,50 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
+        <LinearLayout
+            android:id="@+id/DiceRolls"
+            android:layout_width="154dp"
+            android:layout_height="331dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/d4Game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RollD4" />
+
+            <Button
+                android:id="@+id/d6Game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Roll D6" />
+
+            <Button
+                android:id="@+id/d8Game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Roll D8" />
+
+            <Button
+                android:id="@+id/d10Game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Roll D10" />
+
+            <Button
+                android:id="@+id/d12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Roll D12" />
+
+            <Button
+                android:id="@+id/d20Game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Roll D20" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/damage"
             android:layout_width="wrap_content"
